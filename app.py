@@ -1,6 +1,7 @@
 import qrcode
 
-def  gerador_qrcode(text):
+
+def gerador_qrcode(text):
     qr = qrcode.QRCode(
         version=1,
         error_correction=qrcode.constants.ERROR_CORRECT_L,
@@ -12,6 +13,7 @@ def  gerador_qrcode(text):
     qr.make(fit=True)
     img = qr.make_image(fill_color="black", back_color="white")
     img.save("QRCode-img01.png")
+
 
 url = input("Insira a url: ")
 
